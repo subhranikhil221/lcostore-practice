@@ -1,0 +1,101 @@
+openapi: 3.0.0
+info:
+  title: Social app
+  description: our first social app at LCO -nikhil
+  version: 1.0.1
+
+servers:
+  - url: http://localhost:4000/api/v1
+    description: local host version of our app
+  - url: http://localhost:4000/api/v1
+    description: this is justr a summry id doesnt work
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 4
+        name:
+          type: string
+          example: Arthur Dent
+      # Both properties are required
+      required:
+        - id
+        - name
+#to get the infomation and also post using html methods ex:get ,post  etc etc
+paths:
+  /instagram:
+    get:
+      summary: Returns a list of users.,follers and following and also date
+      description: Optional extended description in CommonMark or HTML
+      responses:
+        "200": #status code
+          description: A JSON array of user names and object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: string
+                  following:
+                    type: string
+                $ref: "#/components/schemas/User"
+                items:
+                  type: string
+
+    post:
+      summary: Returns a list of users.,follers and following and also date
+      description: Optional extended description in CommonMark or HTML
+      responses:
+        "200": #status code
+          description: A JSON array of user names and object
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+                items:
+                  type: string
+
+  #why we use the token beacuse the parameter we can also declaring the paramnetrs
+  #parameters are in the bookmark list #https://swagger.io/docs/specification/describing-parameters/
+
+  /{token}:
+    get:
+      summary: Returns a list of users.,follers and following and also date
+      parameters:
+        - name: token
+          default: 56
+          in: path
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              followers:
+                type: string
+              following:
+                type: string
+      description: Optional extended description in CommonMark or HTML
+      responses:
+        "200": #status code
+          description: A JSON array of user names and object
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  username:
+                    type: string
+                  followers:
+                    type: string
+                  following:
+                    type: string
+                $ref: "#/components/schemas/User"
+                items:
+                  type: string

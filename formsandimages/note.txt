@@ -1,0 +1,16 @@
+* mkdir fileuploadandimages
+* //every essentials to be installed using *npm install -y
+
+*  modules are needs to be installed for the fileupload and images package
+ //-express-js / a framework of js
+ //-ejs- javascript embedding templeting 
+ //-cluodinary- for installation of cloud use for image and videos storing   //////this all are known as the DEV dependencies
+ //-very much essentials 
+ 
+
+ * start from index.js like callling the every thing that we are imported here in the package.json file
+
+
+ * if the key and value is in the url_encodded form then it shown in  the dB
+
+ *from  data should be in the url_encoded form for getting the data

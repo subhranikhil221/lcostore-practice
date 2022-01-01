@@ -1,0 +1,33 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.27.1",
+    "date-format": "^3.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "swagger-ui-express": "^4.1.6",
+    "yaml": "^1.10.2",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subhranikhil221/swagger-ui.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/subhranikhil221/swagger-ui/issues"
+  },
+  "homepage": "https://github.com/subhranikhil221/swagger-ui#readme",
+  "description": ""
+}
